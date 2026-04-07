@@ -1,0 +1,178 @@
+{
+  "masthead": {
+    "title": "ARTIFICIAL AGE",
+    "tagline": "INTELLIGENT. ALWAYS.",
+    "date": "SUNDAY, APRIL 6, 2026",
+    "price": "$5.20",
+    "url": "theartificialage.com.au"
+  },
+  "sections": {
+    "1": {
+      "id": "inner-circle",
+      "externalUrl": "https://inner-circle-influencer-app.vercel.app/",
+      "coverTitle": "INNER CIRCLE",
+      "coverSubtitle": "Content creator says Hamish won't make any enemies with this one",
+      "coverLabel": "TOOL",
+      "coverLabelPosition": "top-left",
+      "articleTitle": "Inner Circle",
+      "articleSubtitle": "Influencer Relationship Manager",
+      "articleTagline": "A single place to store, organise, and manage every creator relationship your team has",
+      "image": "david-inner-circle.png",
+      "articleTemplate": "article-1",
+      "body": "Inner Circle is an influencer relationship management tool built for teams to keep track of the creators they work with. Instead of scattered spreadsheets, email threads, and half-updated contact lists, it gives you a single place to store influencer profiles, organise them into lists and categories, manage campaign rosters and deliverables, track talent agencies, and export polished reports.\n\nIt runs in a browser, has a mobile version, is password protected, saves the influencer database to the cloud, and doesn't need any setup.",
+      "keyFeatures": [
+        "Centralised influencer database \u2014 Every creator in one place with their social handles, follower counts, rate cards, contact details, internal notes, and communication history. Search across everything instantly from the dashboard.",
+        "Campaign & event management \u2014 Build campaign rosters, assign influencers, track individual deliverables (posts, reels, stories) with real engagement stats, manage budgets, and organise events with invitation status tracking.",
+        "Lists, categories & smart filtering \u2014 Group influencers into shortlists, tag them by vertical (beauty, fitness, travel, etc.), and filter by location, follower size, agency, campaign, client, or outreach status to find who you need fast.",
+        "Spreadsheet import & export \u2014 Drop in an existing spreadsheet and the app maps your columns automatically. Export curated lists to Excel, generate branded campaign performance reports, or download a full JSON backup."
+      ],
+      "plannedFeatures": [
+        "Auto-grab \u2014 engagement data, follower count etc. Trying to get the app auto-searching for updated follower counts mainly, but also post data.",
+        "Client sharing view \u2014 a shareable view within the app so we don't have to export spreadsheets.",
+        "Influencer scorecard \u2014 a cross-campaign performance aggregator so we can see some performance averages from campaigns we've run with them.",
+        "Powerpoint export \u2014 or similar that is closer to a finalised report.",
+        "MCP connection for AI \u2014 Building in the functionality so you can ask AI to research influencers, get all their details then put them into the app."
+      ]
+    },
+    "2": {
+      "id": "robotic-scriptures",
+      "coverTitle": "ROBOTIC SCRIPTURES",
+      "coverSubtitle": "Words are proving even more important in the age of machines",
+      "coverLabel": "NEWS",
+      "articleTitle": "Robotic Scriptures",
+      "articleSubtitle": "Desktop Transcription App",
+      "articleTagline": "A desktop app that turns audio and video into searchable, tagged transcripts entirely on your machine",
+      "image": "robotic-scriptures-image-vertical.png",
+      "articleHeaderTemplate": "article-header",
+      "articleTemplate": "article-1",
+      "body": "Robotic Scripture is a desktop app that turns audio and video into searchable, tagged transcripts \u2014 entirely on your machine, with no cloud services or logins required. Paste a YouTube link, drop in a podcast URL, or drag over a local file, and the app downloads the media, transcribes it locally, and saves the result to a searchable library. It's built for anyone who needs to quickly pull quotes, reference conversations, or archive spoken content \u2014 comms teams, researchers, producers, or anyone who works with audio/video regularly.",
+      "keyFeatures": [
+        "Paste-and-go transcription \u2014 drop in a YouTube link, podcast URL, or local audio/video file and get a clean transcript in minutes, no manual setup required.",
+        "Podcast subscriptions \u2014 search for and subscribe to podcasts (including from Spotify and Apple Podcasts links), then bulk-transcribe new episodes as they come in.",
+        "Searchable transcript library \u2014 filter and search your full history of transcripts by tag, source, or keyword; copy text to clipboard or download as a .txt file with one click.",
+        "Runs 100% locally \u2014 all transcription happens on your computer. Nothing is uploaded to the cloud, so sensitive recordings stay private.",
+        "Auto-cleanup \u2014 filler words ('um,' 'uh,' 'you know') are stripped out automatically, and sentences are cleaned up for readability."
+      ],
+      "techNote": "This is a MacOS app that uses local speech-to-text powered by OpenAI's open-source Whisper model, meaning it uses the power of your computer to transcribe, rather than online subscriptions."
+    },
+    "3": {
+      "id": "scout",
+      "externalUrl": "https://ooh-site-viewer.vercel.app/",
+      "coverTitle": "SCOUT",
+      "coverSubtitle": "Where to eat, shop or put up a billboard according to marketing experts",
+      "coverLabel": "APP",
+      "articleTitle": "Scout",
+      "articleSubtitle": "Billboard Viewer",
+      "image": "scout_walking_person.png",
+      "articleTemplate": null,
+      "body": null
+    },
+    "4_inside_top": {
+      "id": "soundscape",
+      "externalUrl": "http://localhost:3000/",
+      "coverTitle": "SOUNDSCAPE",
+      "coverSubtitle": "Your Spotify stats, visualised",
+      "coverLabel": "NEWS PAGE 5",
+      "articleTitle": "Soundscape",
+      "articleSubtitle": "Personal Spotify Stats",
+      "image": "spotify-purp-hi.png",
+      "articleTemplate": null,
+      "body": null
+    },
+    "5_inside_mid": {
+      "id": "drop-shop-editor",
+      "externalUrl": "http://localhost:8501/",
+      "coverTitle": "DROP SHOP IMAGE EDITOR",
+      "coverSubtitle": "Product Photography Tool",
+      "coverLabel": "NEWS PAGE 6",
+      "articleTitle": "Drop Shop Product Image Editor",
+      "articleSubtitle": "Product Photography Tool",
+      "image": "robot-dropshop.png",
+      "articleTemplate": null,
+      "body": null
+    },
+    "6_inside_bot": {
+      "id": "ticketing-report",
+      "externalUrl": "https://docs.google.com/spreadsheets/d/18j7XW_tzTGbAnrZYygJPHBNxqfYgaDfr7zNNfF6XUKc/edit?usp=sharing",
+      "coverTitle": "PALACE FORESHORE TICKETING REPORT",
+      "coverSubtitle": "Automated ticket sales dashboard",
+      "coverLabel": "NEWS PAGE 7",
+      "articleTitle": "Palace Foreshore Ticketing Report",
+      "articleSubtitle": "Google Apps Script Automated Report",
+      "image": "pendulum.jpg",
+      "articleTemplate": null,
+      "body": null
+    },
+    "7_main": {
+      "id": "postcode-report",
+      "externalUrl": "https://postcode-report-app.vercel.app/",
+      "coverTitle": "PALACE FORESHORE POST CODE REPORT",
+      "coverSubtitle": "An interactive web app that maps where ticket buyers are coming from",
+      "articleTitle": "Palace Foreshore Post Code Report",
+      "articleSubtitle": "Interactive Ticket Sales Map",
+      "articleTagline": "An interactive web app that maps where ticket buyers are coming from",
+      "image": "post-code-report-image.png",
+      "articleTemplate": null,
+      "body": "The Post Code Report is an interactive web app that maps where ticket buyers are coming from. It takes postcode-level sales data from across Australia and turns it into a visual, filterable dashboard, allowing you to instantly see geographic demand patterns across shows. It's a much more digestible, usable and quick way to get an idea of ticket sales.",
+      "keyFeatures": [
+        "Interactive map of ticket sales: Every postcode with sales appears as a dot on a map, sized by volume. You can switch to a heatmap view to see density patterns at a glance.",
+        "Filter by show: Toggle individual artists on or off to compare where different audiences are coming from \u2014 each show is colour-coded so you can visually distinguish them on the map.",
+        "Filter by region: Click geographic regions (Inner Metro, Western, Northern, Interstate states, etc.) to isolate and drill into a specific area. A panel shows the breakdown by show for that region.",
+        "Toggle between Tickets and Customers: Switch the metric the whole dashboard runs on \u2014 total tickets sold or unique customer count \u2014 to get different perspectives on the same data.",
+        "Top 5 / Top 20 postcode cards: A row of cards at the bottom shows the highest-performing postcodes for each show (and across all shows). Click any card to expand it into a full Top 20 ranking.",
+        "Zoom presets: Jump between Melbourne overview, CBD close-up, Geelong, Ballarat, Bendigo, or all of Victoria with one click \u2014 no manual zooming required.",
+        "Click any dot for detail: Tapping a postcode on the map pops up the suburb name, postcode, region, and a per-show ticket breakdown."
+      ]
+    },
+    "8_ad": {
+      "id": "castle-of-finance",
+      "externalUrl": "http://localhost:5173/",
+      "articleTitle": "Castle of Finance",
+      "articleSubtitle": "Share Portfolio Tracker",
+      "adTagline": "IF WARREN BUFFETT BUILT AN APP",
+      "adColourScheme": "gold-green",
+      "image": "castle-of-finacnce_logo.png",
+      "articleTemplate": null,
+      "body": "This is a share portfolio tracker. It solves a simple problem: tools like Sharesight that track your investments, dividends, and tax obligations cost $200\u2013$500+ per year, which is a lot if you have a small portfolio. Castle of Finance gives you the same core functionality (live prices, performance charts, dividend tracking, capital gains tax reports) for free, running on a free-tier cloud database.",
+      "keyFeatures": [
+        "Live portfolio dashboard \u2014 See your holdings, total value, and daily gains/losses at a glance, with live prices pulled from Yahoo Finance.",
+        "Performance tracking with benchmarks \u2014 Compare your portfolio's annualised return against up to three benchmark ETFs (e.g. the ASX 200) to see if you're actually beating the market.",
+        "Dividend management \u2014 Automatically tracks dividends, dividend reinvestment plans (DRP), and Australian franking credits.",
+        "Tax-ready reports \u2014 Calculates capital gains tax the way the ATO expects (FIFO method, 50% CGT discount for long-held stocks, grouped by financial year), with CSV export.",
+        "Easy data import \u2014 Import your trade history from CommSec, SelfWealth, Stake, or Interactive Brokers via CSV, or even import CommSec dividend statements from PDF.",
+        "Stock information tracking \u2014 Follows some key points from AGM reports that help value a company past its P/E ratio."
+      ]
+    },
+    "9_ad": {
+      "id": "rfp-maker",
+      "externalUrl": "https://cs-rfp-template.vercel.app/",
+      "articleTitle": "RFP Maker",
+      "articleSubtitle": "Request for Proposal Generator",
+      "image": null,
+      "articleTemplate": null,
+      "body": null
+    },
+    "10_ad": {
+      "id": "drop-shop-ad",
+      "externalUrl": "https://www.dropshopdrinks.com/",
+      "articleTitle": "Drop Shop Product Image Editor",
+      "articleSubtitle": "Product Photography Tool",
+      "image": null,
+      "articleTemplate": null,
+      "body": null
+    },
+    "11_ad": {
+      "id": "walden-os",
+      "externalUrl": "http://localhost:3001/dashboard",
+      "articleTitle": "Walden OS",
+      "articleSubtitle": "Deep Work Environment",
+      "image": null,
+      "articleTemplate": null,
+      "body": null
+    }
+  },
+  "housingGrowthSection": {
+    "headline": "Summer of code: local man forgets to go outside",
+    "note": "Placeholder text area. Content TBD."
+  }
+}

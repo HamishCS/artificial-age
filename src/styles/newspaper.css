@@ -1,0 +1,259 @@
+/* ── Custom fonts ── */
+@font-face {
+  font-family: 'TT Regins Display';
+  src: url('../assets/fonts/TT_Regins_Display_Trial_Regular.woff2') format('woff2'),
+       url('../assets/fonts/TT_Regins_Display_Trial_Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Regins Display';
+  src: url('../assets/fonts/TT_Regins_Display_Trial_Italic.woff2') format('woff2'),
+       url('../assets/fonts/TT_Regins_Display_Trial_Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BentonModDisp';
+  src: url('../assets/fonts/BentonModDisp-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Compacta';
+  src: url('../assets/fonts/Compacta Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'EgyptianEF';
+  src: url('../assets/fonts/EgyptianEF Extended Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* The Age blue */
+:root {
+  --age-blue: #00529B;
+  --age-blue-dark: #003d75;
+  --paper: #e8e4df;
+  --ink: #1a1a1a;
+  --rule: #333;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #222;
+  font-family: 'TT Regins Display', 'Lora', Georgia, serif;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scale the 1920x1080 layout to fit the viewport */
+#root {
+  width: 1920px;
+  height: 1080px;
+  transform-origin: top left;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Newsprint texture overlay ── */
+#root::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 1920px;
+  height: 1080px;
+  pointer-events: none;
+  z-index: 99999;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* ── Fullscreen button ── */
+.fullscreen-btn {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  z-index: 99999;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: background 150ms;
+}
+.fullscreen-btn:hover {
+  background: rgba(0,0,0,0.9);
+}
+
+/* ── Typography ── */
+.font-playfair { font-family: 'Playfair Display', Georgia, serif; }
+.font-oswald   { font-family: 'Oswald', 'Arial Narrow', sans-serif; }
+.font-franklin  { font-family: 'Libre Franklin', 'Helvetica Neue', sans-serif; }
+.font-lora      { font-family: 'TT Regins Display', 'Lora', Georgia, serif; }
+
+/* ── Newspaper rules / lines ── */
+.rule-h {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 0;
+}
+.rule-h-thick {
+  border: none;
+  border-top: 3px solid var(--ink);
+  margin: 0;
+}
+.rule-v {
+  width: 1px;
+  background: var(--rule);
+  align-self: stretch;
+}
+
+/* ── Page shell ── */
+.page {
+  width: 960px;
+  height: 1080px;
+  background: var(--paper);
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* ── Viewport / stage ── */
+.stage {
+  width: 1920px;
+  height: 1080px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Slide transitions ── */
+.slide-container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1080px;
+  transition: transform 500ms ease-in-out;
+}
+
+/* ── Body text columns ── */
+.columns-3 {
+  column-count: 3;
+  column-gap: 24px;
+  column-rule: 1px solid #ccc;
+  text-align: justify;
+  font-size: 17px;
+  line-height: 1.55;
+}
+.columns-2 {
+  column-count: 2;
+  column-gap: 28px;
+  column-rule: 1px solid #ccc;
+  text-align: justify;
+  font-size: 17px;
+  line-height: 1.55;
+}
+.columns-4 {
+  column-count: 4;
+  column-gap: 20px;
+  column-rule: 1px solid #ccc;
+  text-align: justify;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ── Pull quote ── */
+.pull-quote {
+  font-family: 'TT Regins Display', 'Lora', Georgia, serif;
+  font-style: italic;
+  font-size: 26px;
+  line-height: 1.35;
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+  padding: 16px 0;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* ── Section label badges ── */
+.section-label {
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: var(--age-blue);
+  color: #fff;
+  padding: 3px 10px;
+  display: inline-block;
+}
+
+/* ── Clickable sections ── */
+.clickable-section {
+  cursor: pointer;
+  transition: opacity 150ms;
+}
+.clickable-section:hover {
+  opacity: 0.8;
+}
+
+/* ── Back button ── */
+.back-btn {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 100;
+  background: rgba(26,26,26,0.85);
+  color: var(--paper);
+  border: none;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 16px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background 150ms;
+}
+.back-btn:hover {
+  background: rgba(26,26,26,1);
+}
+
+/* ── Placeholder image box ── */
+.placeholder-img {
+  background: #bbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
