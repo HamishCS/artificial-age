@@ -68,41 +68,6 @@ function circleIntervalForBand(
   return { left: cx - maxDx - hPad, right: cx + maxDx + hPad }
 }
 
-function layoutColumn(
-  prepared: PreparedTextWithSegments, startCursor: LayoutCursor,
-  regionX: number, regionY: number, regionW: number, regionH: number,
-  lineHeight: number, circleObstacles: CircleObstacle[],
-): { lines: { x: number; y: number; width: number; slotWidth: number; text: string }[]; cursor: LayoutCursor; textExhausted: boolean } {
-  let cursor = startCursor
-  let lineTop = regionY
-  const lines: { x: number; y: number; width: number; slotWidth: number; text: string }[] = []
-  let textExhausted = false
-  while (lineTop + lineHeight <= regionY + regionH && !textExhausted) {
-    const bandTop = lineTop, bandBottom = lineTop + lineHeight
-    const blocked: Interval[] = []
-    for (const obs of circleObstacles) {
-      const iv = circleIntervalForBand(obs.cx, obs.cy, obs.r, bandTop, bandBottom, obs.hPad, obs.vPad)
-      if (iv) blocked.push(iv)
-    }
-    const slots = carveTextLineSlots({ left: regionX, right: regionX + regionW }, blocked)
-    if (slots.length === 0) { lineTop += lineHeight; continue }
-    let placedLineInBand = false
-    for (const slot of [...slots].sort((a, b) => a.left - b.left)) {
-      const slotWidth = slot.right - slot.left
-      const line = layoutNextLine(prepared, cursor, slotWidth)
-      if (!line) continue
-      lines.push({ x: Math.round(slot.left), y: Math.round(lineTop), text: line.text, width: line.width, slotWidth })
-      cursor = line.end
-      placedLineInBand = true
-    }
-    if (!placedLineInBand && slots.length === 1) {
-      textExhausted = true
-    }
-    lineTop += lineHeight
-  }
-  return { lines, cursor, textExhausted }
-}
-
 function hitTestOrbs(orbs: Orb[], px: number, py: number): number {
   for (let i = orbs.length - 1; i >= 0; i--) {
     const dx = px - orbs[i].x, dy = py - orbs[i].y

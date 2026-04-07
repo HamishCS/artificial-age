@@ -128,7 +128,6 @@ export default function CoverPage({ content, onSectionClick, isActive }: CoverPa
   ) => {
     const pageMatch = typeof section.coverLabel === 'string' ? section.coverLabel.match(/PAGE\s+(\d+)/i) : null
     const pageNumber = pageMatch?.[1] ?? ''
-    const imageHeight = options?.imageHeight ?? 170
     const compact = options?.compact ?? false
 
     return (
